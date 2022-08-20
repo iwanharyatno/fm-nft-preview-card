@@ -4,12 +4,123 @@
   --color-bg: hsl(217, 54%, 11%);
   --color-card-bg: hsl(216, 50%, 16%);
   --color-divider: hsl(215, 32%, 27%);
-  --color-text-primary: hsl(215, 51%, 70%);
-  --color-text-secondary: hsl(178, 100%, 50%);
+  --color-text-primary: hsl(178, 100%, 50%);
+  --color-text-secondary: hsl(215, 51%, 70%);
 }
 
 body {
   font-family: 'Outfit', sans-serif;
-  padding: 1rem;
+  padding: 1.5rem;
   margin: 0;
+  background-color: var(--color-bg);
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--color-divider);
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.4s;
+}
+
+.preview-card {
+  padding: 1.5rem;
+  background-color: var(--color-card-bg);
+  color: var(--color-text-secondary);
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+}
+
+.preview-image {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.image-group {
+  position: relative;
+}
+
+.image-group:hover .image-hover {
+  opacity: 1;
+}
+
+.image-hover {
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  border-radius: 0.5rem;
+  transition: all 0.4s;
+}
+
+.preview-title {
+  color: #fff;
+  transition: all 0.4s;
+}
+
+.nft-preview-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.nft-price,
+.nft-expired-in {
+  display: flex;
+  align-items: center;
+}
+
+.nft-price {
+  color: var(--color-text-primary);
+  font-weight: bold;
+}
+
+.icon {
+  margin-right: 0.5rem;
+}
+
+.preview-credit {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.credit-avatar {
+  width: 2rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+a:hover,
+.preview-title:hover {
+  color: var(--color-text-primary);
+}
+
+.center {
+  max-width: 25rem;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .center {
+    max-width: 25%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
